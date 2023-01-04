@@ -32,7 +32,7 @@ def secure_pass_gen():
 
     return password
 
-def main():
+def gen_passwd():
     valid_temp = ['temporary', 'temp', 'temporary user', 'temporary user password', 'temporary password', 't']
     valid_secure = ['secure', 'sec', 'secure password', 's']
 
@@ -56,7 +56,26 @@ def main():
         password = secure_pass_gen()
 
     print(password)
-    return password
+
+    response = input(f'Would you like to generate another password (y/n)? ')
+
+    valid_yes = ['yes', 'y', 'Yes', 'Y', 'Yep', 'yep']
+    valid_no = ['no', 'n', 'No', 'N', 'nah', 'Nah']
+
+    if response in valid_yes:
+        kg = True
+    elif response in valid_no:
+        kg = False
+
+    return kg
+
+def main():
+    kg = True
+    while kg ==True:
+        kg = gen_passwd()
+
+    print(f'Thank you for using my password generator :)')
+
 
 if __name__ == "__main__":
     main()
