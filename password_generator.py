@@ -70,8 +70,6 @@ def gen_passwd():
     elif response in valid_no:
         kg = False
 
-
-
     return kg
 
 def main():
