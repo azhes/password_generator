@@ -62,10 +62,15 @@ def gen_passwd():
     valid_yes = ['yes', 'y', 'Yes', 'Y', 'Yep', 'yep']
     valid_no = ['no', 'n', 'No', 'N', 'nah', 'Nah']
 
+    while response not in valid_no and response not in valid_yes:
+        response = input(f'Please type "yes" or "no". ')
+
     if response in valid_yes:
         kg = True
     elif response in valid_no:
         kg = False
+
+
 
     return kg
 
