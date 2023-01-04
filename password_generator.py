@@ -11,6 +11,8 @@ def import_words(filename):
 
 def user_pass_gen(words):
     pw_word = random.choice(words)
+    while len(pw_word) < 5:
+        pw_word = random.choice(words)
     pw_word = pw_word.capitalize()
     pw_num = random.randint(100, 1000)
     pw_symbol = random.choice(string.punctuation)
