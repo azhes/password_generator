@@ -33,7 +33,7 @@ def secure_pass_gen():
     return password
 
 def gen_passwd():
-    valid_temp = ['temporary', 'temp', 'temporary user', 'temporary user password', 'temporary password', 't']
+    valid_temp = ['temporary', 'temp', 'temporary user', 'temporary user password', 'temporary password', 't', 'u', 'user']
     valid_secure = ['secure', 'sec', 'secure password', 's']
 
     password_type = input(f'Would you like to generate a temporary user password or a secure password? ')
@@ -78,7 +78,6 @@ def main():
         kg = gen_passwd()
 
     print(f'Thank you for using my password generator :)')
-
 
 if __name__ == "__main__":
     main()
